@@ -20,6 +20,7 @@ t/00_compile.t
 t/01_new.t
 t/02_parse_envfile.t
 t/03_run_with_env.t
+t/Util.pm
 xt/01_podspell.t
 xt/02_pod.t
 xt/03_pod-coverage.t
