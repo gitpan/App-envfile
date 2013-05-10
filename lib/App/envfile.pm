@@ -5,7 +5,7 @@ use warnings;
 use 5.008_001;
 use Carp ();
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 our $EXTENTIONS_MAP = {
     pl   => 'Perl',
@@ -53,7 +53,7 @@ sub parse_envfile {
 sub _try_any_config_file {
     my ($self, $file) = @_;
 
-    my ($ext) = $file =~ /\.(\w+)/;
+    my ($ext) = $file =~ /\.(\w+)$/;
     if (my $type = $EXTENTIONS_MAP->{lc($ext || '')}) {
         my $env;
         if ($type eq 'Perl') {
